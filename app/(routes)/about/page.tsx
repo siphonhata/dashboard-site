@@ -51,7 +51,7 @@ export default function AboutPage() {
               About No Name Solutions
             </h1>
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a passionate team of developers and designers dedicated to creating 
+              We are a passionate team of developers and designers dedicated to creating
               exceptional digital experiences for businesses across South Africa and beyond.
             </p>
           </div>
@@ -82,8 +82,8 @@ export default function AboutPage() {
             <div className="lg:w-1/2">
               <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
               <p className="mt-4 text-lg text-gray-600">
-                To empower businesses with innovative web solutions that drive growth and success 
-                in the digital age. We believe in creating websites and applications that not 
+                To empower businesses with innovative web solutions that drive growth and success
+                in the digital age. We believe in creating websites and applications that not
                 only look great but also deliver measurable results for our clients.
               </p>
               <div className="mt-8">
@@ -105,10 +105,13 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0 lg:w-1/2">
-              <Image 
-                src="https://t3.ftcdn.net/jpg/04/18/52/88/360_F_418528804_xgyFvVsMSHeWk1UgDtR9aoccqSC7BrHy.jpg" 
-                alt="Our Mission" 
-                className="rounded-lg shadow-lg"
+              <Image
+                src="https://t3.ftcdn.net/jpg/04/18/52/88/360_F_418528804_xgyFvVsMSHeWk1UgDtR9aoccqSC7BrHy.jpg"
+                alt="Our Mission"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg object-cover w-full"
+                priority
               />
             </div>
           </div>
@@ -121,16 +124,18 @@ export default function AboutPage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900">Meet Our Team</h2>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-              Our talented team of professionals brings together years of experience 
+              Our talented team of professionals brings together years of experience
               in web development, design, and project management.
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <Image 
-                  src={member.image} 
-                  alt={member.name} 
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={600}
+                  height={400}
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">

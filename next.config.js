@@ -7,6 +7,11 @@ const nextConfig = {
           hostname: 't3.ftcdn.net',
           pathname: '/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'avatars.githubusercontent.com',
+          pathname: '/**',
+        }
       ],
     },
     eslint: {
