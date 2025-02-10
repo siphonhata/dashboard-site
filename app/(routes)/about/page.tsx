@@ -40,7 +40,8 @@ const teamMembers = [
   }
 ];
 
-export default function AboutPage() {
+export default function About() {
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
