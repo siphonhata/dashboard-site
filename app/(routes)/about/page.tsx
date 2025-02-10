@@ -31,12 +31,18 @@ const teamMembers = [
     role: 'Lead Developer',
     image: 'https://avatars.githubusercontent.com/u/92311415?v=4',
     description: 'Full-stack developer',
+    skills: ["React.js", "Next.js", "Node.js", "TypeScript", "MongoDB"],
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/"
   },
   {
     name: 'Sipho Ndlalane',
     role: 'Full Stack Developer',
     image: 'https://avatars.githubusercontent.com/u/123639497?v=4',
     description: 'Full-stack Developer',
+    skills: ["React.js", "Next.js", "Node.js", "TypeScript", "MongoDB"],
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/"
   }
 ];
 
@@ -121,34 +127,64 @@ export default function About() {
 
       {/* Team Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">Meet Our Team</h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-              Our talented team of professionals brings together years of experience
-              in web development, design, and project management.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={600}
-                  height={400}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                  <p className="text-blue-600">{member.role}</p>
-                  <p className="mt-4 text-gray-600">{member.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+   <div className="text-center" data-aos="fade-down">
+     <h2 className="text-3xl font-bold text-gray-900">Meet Our Team</h2>
+     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+       Our talented team of professionals brings together years of experience
+       in web development, design, and project management.
+     </p>
+   </div>
+   <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto">
+     {teamMembers.map((member, index) => (
+       <div 
+         key={index} 
+         className="bg-white rounded-lg shadow-md overflow-hidden"
+         data-aos="fade-up"
+         data-aos-delay={index * 200}
+       >
+         <div className="relative h-80">
+           <Image
+             src={member.image}
+             alt={member.name}
+             fill
+             className="object-cover"
+             sizes="(max-width: 768px) 100vw, 50vw"
+           />
+         </div>
+         <div className="p-6">
+           <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
+           <p className="text-blue-600">{member.role}</p>
+           <p className="mt-4 text-gray-600">{member.description}</p>
+         </div>
+         {/* Social Links */}
+         <div className="px-6 pb-6 flex justify-end space-x-2">
+           
+          <a   href={member.linkedin}
+             target="_blank"
+             rel="noopener noreferrer"
+             className="p-3 bg-white rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-200"
+           >
+             <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+               <path d="M20.25 2.25H3.75A1.5 1.5 0 002.25 3.75v16.5a1.5 1.5 0 001.5 1.5h16.5a1.5 1.5 0 001.5-1.5V3.75a1.5 1.5 0 00-1.5-1.5zM8.25 18.75h-3v-9h3v9zM6.75 8.25a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm12 10.5h-3v-4.5c0-1.125-.025-2.575-1.575-2.575-1.575 0-1.825 1.225-1.825 2.5v4.575h-3v-9h2.875v1.325h.05c.4-.775 1.4-1.575 2.875-1.575 3.075 0 3.625 2.025 3.625 4.65v4.575z" />
+             </svg>
+           </a>
+           
+           <a  href={member.github}
+             target="_blank"
+             rel="noopener noreferrer"
+             className="p-3 bg-white rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-200"
+           >
+             <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+               <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+             </svg>
+           </a>
+         </div>
+       </div>
+     ))}
+   </div>
+ </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 hidden">
