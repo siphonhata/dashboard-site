@@ -5,6 +5,8 @@ export interface Service {
   title: string;
   description: string;
   link: string;
+  features: string[];
+  tag: string
 }
 
 export interface Feature {
