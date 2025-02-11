@@ -1,4 +1,4 @@
-import { Code, Monitor, Smartphone, Database, Lock, Megaphone, Globe, Gauge, Server } from 'lucide-react';
+import { Code, Monitor, Cpu, Globe, Gauge, Server } from 'lucide-react';
 import { Service } from '@/app/lib/types';
 
 const services: Service[] = [
@@ -43,11 +43,15 @@ const services: Service[] = [
     link: ''
   },
   {
-    icon: Database,
-    title: "CMS Development",
-    description: "Custom content management systems that make updating your website content effortless.",
-    features: ["User-friendly Interface", "Content Scheduling", "Media Management"],
-    tag: "Content",
+    icon: Cpu,
+    title: "Student Development",
+    description: "Professional development support for final year IT and Computer Science projects, focusing on real-world applications.",
+    features: [
+      "Full-stack Applications",
+      "Mobile App Development",
+      "System Integration"
+    ],
+    tag: "Academic",
     link: ''
   }
 ];
@@ -92,26 +96,6 @@ export default function Services() {
               }}
             >
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/[0.08] to-emerald-500/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* {service.tag && (
-                <span 
-                  data-aos="fade-left"
-                  data-aos-delay={index * 100 + 200}
-                  className="absolute top-4 right-4 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full"
-                >
-                  {service.tag}
-                </span>
-              )} */}
-
-              {/* <div 
-                data-aos="zoom-in"
-                data-aos-delay={index * 100 + 100}
-                className="relative flex items-center justify-center w-16 h-16 mb-8"
-              >
-                <div className="absolute inset-0 rounded-2xl bg-blue-600/10 transform rotate-6 transition-transform group-hover:rotate-12" />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700" />
-                <service.icon className="relative w-8 h-8 text-white" />
-              </div> */}
 
               <h3 className="relative text-2xl font-semibold text-gray-900 mb-4">
                 {service.title}
@@ -123,8 +107,8 @@ export default function Services() {
 
               <ul className="relative space-y-3 mb-8">
                 {service.features.map((feature, idx) => (
-                  <li 
-                    key={idx} 
+                  <li
+                    key={idx}
                     data-aos="fade-right"
                     data-aos-delay={index * 50 + idx * 100}
                     className="flex items-center text-gray-600"
@@ -139,7 +123,7 @@ export default function Services() {
                 ))}
               </ul>
 
-              <a
+              {/* <a
                 href={`#contact`}
                 className="relative inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-2 transition-all duration-300"
               >
@@ -147,14 +131,14 @@ export default function Services() {
                 <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </a> */}
             </div>
           ))}
         </div>
 
         {/* Technologies Section */}
         <div className="mt-32 text-center hidden">
-          <h3 
+          <h3
             data-aos="fade-up"
             className="text-2xl font-semibold text-gray-900 mb-12"
           >
@@ -179,19 +163,19 @@ export default function Services() {
         </div>
 
         {/* Call to Action */}
-        <div 
+        <div
           data-aos="fade-up"
           data-aos-duration="1000"
           className="mt-32 text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 md:p-16"
         >
-          <h3 
+          <h3
             data-aos="fade-up"
             data-aos-delay="100"
             className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
             Ready to Transform Your Web Presence?
           </h3>
-          <p 
+          <p
             data-aos="fade-up"
             data-aos-delay="200"
             className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg"
