@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { Plans } from '@/app/lib/types';
+import Link from 'next/link';
 
 export default function Pricing() {
   const plans: Plans[] = [
@@ -89,14 +90,16 @@ export default function Pricing() {
               ))}
             </ul>
             <button
-              className={`w-full rounded-md px-8 py-3 text-base font-medium transition-colors duration-300 ${
-                highlighted
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'border border-gray-300 bg-gray-50 text-gray-900 hover:bg-gray-100'
-              }`}
-            >
-              Start Project
-            </button>
+  className={`w-full rounded-md px-8 py-3 text-base font-medium transition-colors duration-300 ${
+    highlighted
+      ? 'bg-blue-600 text-white hover:bg-blue-700'
+      : 'border border-gray-300 bg-gray-50 text-gray-900 hover:bg-gray-100'
+  }`}
+>
+  <Link href="#contact" className="block w-full h-full">
+    Start Project
+  </Link>
+</button>
           </div>
         </div>
       </div>
