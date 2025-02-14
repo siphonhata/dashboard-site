@@ -12,7 +12,9 @@ export default function Navbar() {
     { name: 'Services', href: 'services' },
     { name: 'Features', href: 'features' },
     { name: 'About', href: 'about' },
+    { name: 'Pricing', href: 'pricing'},
     { name: 'Contact', href: 'contact' },
+    
   ];
 
   // Custom debounce function
@@ -101,11 +103,11 @@ export default function Navbar() {
               href="#home"
               onClick={(e) => handleScroll(e, 'home')}
               className="flex items-center"
-              aria-label="No Name Solutions home"
+              aria-label="Smart Web Sync Solutions home"
             >
               <Globe className="w-8 h-8 text-blue-600" aria-hidden="true" />
               <span className="ml-2 text-xl font-bold text-gray-900">
-                No Name Solutions
+              Smart Web Sync Solutions
               </span>
             </a>
           </div>

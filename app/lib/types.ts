@@ -22,3 +22,10 @@ export interface ContactFormData {
          email: string;
   message: string;
 }
+export interface Plans {
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  highlighted?: boolean;
+}

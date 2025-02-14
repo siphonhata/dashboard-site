@@ -6,6 +6,7 @@ import About from "./(routes)/about/page";
 import Contact from "./components/home/Contact";
 import Features from "./components/home/Features";
 import Hero from "./components/home/Hero";
+import Pricing from "./components/home/Pricing";
 import Services from "./components/home/Services";
 
 
@@ -27,6 +28,10 @@ export default function Home() {
 
       <section id="about">
         <About />
+      </section>
+
+      <section id="pricing">
+        <Pricing />
       </section>
 
       <section id="contact">
