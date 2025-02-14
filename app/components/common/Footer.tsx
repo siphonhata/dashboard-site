@@ -47,16 +47,16 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-4">
               <li className="text-gray-400">
-                Cape Town, South Africa
+                Gauteng, South Africa
               </li>
               <li>
                 <a href="tel:+27123456789" className="text-gray-400 hover:text-white transition-colors">
-                  +27 12 345 6789
+                  +27 76 335 1282
                 </a>
               </li>
               <li>
-                <a href="mailto:info@webcraft.co.za" className="text-gray-400 hover:text-white transition-colors">
-                  info@webcraft.co.za
+                <a href="mailto:siphonhata@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                  siphonhata@gmail.com
                 </a>
               </li>
             </ul>

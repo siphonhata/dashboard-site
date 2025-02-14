@@ -7,19 +7,25 @@ export const SERVICES: Service[] = [
     icon: Code,
     title: "Web Development",
     description: "Custom websites built with modern technologies and best practices",
-    link: "/services/web-development"
+    link: "/services/web-development",
+    tag: " ",
+    features: []
   },
   {
     icon: Monitor,
     title: "Web Applications",
     description: "Scalable and secure applications for your business needs",
-    link: "/services/web-applications"
+    link: "/services/web-applications",
+    tag: " ",
+    features: []
   },
   {
     icon: Smartphone,
     title: "Responsive Design",
     description: "Mobile-first approach ensuring perfect display on all devices",
-    link: "/services/responsive-design"
+    link: "/services/responsive-design",
+    tag: " ",
+    features: []
   }
 ];
 

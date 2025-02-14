@@ -13,10 +13,12 @@ export interface Feature {
   icon: LucideIcon;
   title: string;
   description: string;
+
+
 }
 
 export interface ContactFormData {
   name: string;
-  email: string;
+         email: string;
   message: string;
 }
