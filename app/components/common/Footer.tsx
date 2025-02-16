@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center">
               <Globe className="w-6 h-6 text-blue-400" />
-              <span className="ml-2 font-medium">WebCraft Solutions</span>
+              <span className="ml-2 font-medium">Smart Web Sync Solutions</span>
             </div>
             <p className="mt-4 text-sm text-gray-400">
               Creating innovative digital solutions for businesses across South Africa.
