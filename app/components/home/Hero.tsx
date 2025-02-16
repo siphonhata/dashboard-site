@@ -4,7 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = {
+  title: 'Hero',
+};
 export default function Hero() {
   useEffect(() => {
     AOS.init({
@@ -36,7 +41,7 @@ export default function Hero() {
                 className="mb-6 inline-block"
               >
                 <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/10 to-emerald-500/10 text-blue-600">
-                Smart Web Sync Solutions
+                Smart WebSync Solutions
                 </span>
               </div>
 

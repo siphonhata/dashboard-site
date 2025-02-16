@@ -2,6 +2,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({

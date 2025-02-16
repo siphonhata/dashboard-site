@@ -2,7 +2,12 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import { Plans } from '@/app/lib/types';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = {
+  title: 'Pricing',
+};
 export default function Pricing() {
   const plans: Plans[] = [
     {

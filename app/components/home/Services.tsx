@@ -1,6 +1,11 @@
 import { Code, Monitor, Cpu, Globe, Gauge, Server } from 'lucide-react';
 import { Service } from '@/app/lib/types';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = {
+  title: 'Services',
+};
 const services: Service[] = [
   {
     icon: Code,

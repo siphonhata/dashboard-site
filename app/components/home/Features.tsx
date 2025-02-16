@@ -1,6 +1,11 @@
 import { CheckCircle, Clock, Globe, Shield, Zap, Headphones } from 'lucide-react';
 import { Feature } from '@/app/lib/types';
+import { Metadata } from 'next';
 
+
+export const metadata: Metadata = {
+  title: 'Features',
+};
 
 const features: Feature[] = [
     {

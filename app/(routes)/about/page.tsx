@@ -32,8 +32,8 @@ const teamMembers = [
     image: 'https://avatars.githubusercontent.com/u/92311415?v=4',
     description: 'Full-stack developer',
     skills: ["React.js", "Next.js", "Node.js", "TypeScript", "MongoDB"],
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/"
+    linkedin: "https://www.linkedin.com/in/dineo-mathibela-53aa191a5/",
+    github: "https://github.com/MathibelaD"
   },
   {
     name: 'Sipho Ndlalane',
@@ -41,8 +41,8 @@ const teamMembers = [
     image: 'https://avatars.githubusercontent.com/u/123639497?v=4',
     description: 'Full-stack Developer',
     skills: ["React.js", "Next.js", "Node.js", "TypeScript", "MongoDB"],
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/"
+    linkedin: "https://www.linkedin.com/in/sipho-ndlalane-802534187/",
+    github: "https://github.com/siphonhata"
   }
 ];
 
@@ -55,7 +55,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              About Smart Web Sync Solutions
+              About Smart WebSync Solutions
             </h1>
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               We are a passionate team of developers and designers dedicated to creating

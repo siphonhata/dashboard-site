@@ -50,8 +50,8 @@ export default function Footer() {
                 Gauteng, South Africa
               </li>
               <li>
-                <a href="tel:+27763351282" className="text-gray-400 hover:text-white transition-colors">
-                  +27 76 335 1282
+                <a href="tel:+27670488810" className="text-gray-400 hover:text-white transition-colors">
+                  +27 67 048 8810
                 </a>
               </li>
               <li>
