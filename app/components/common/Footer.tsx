@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center">
               <Globe className="w-6 h-6 text-blue-400" />
-              <span className="ml-2 font-medium">Smart Web Sync Solutions</span>
+              <span className="ml-2 font-medium">Smart WebSync Solutions</span>
             </div>
             <p className="mt-4 text-sm text-gray-400">
               Creating innovative digital solutions for businesses across South Africa.
@@ -50,13 +50,13 @@ export default function Footer() {
                 Gauteng, South Africa
               </li>
               <li>
-                <a href="tel:+27123456789" className="text-gray-400 hover:text-white transition-colors">
+                <a href="tel:+27763351282" className="text-gray-400 hover:text-white transition-colors">
                   +27 76 335 1282
                 </a>
               </li>
               <li>
-                <a href="mailto:siphonhata@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-                  siphonhata@gmail.com
+                <a href="mailto:smartwebsyncsolutions@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                  smartwebsyncsolutions@gmail.com
                 </a>
               </li>
             </ul>
