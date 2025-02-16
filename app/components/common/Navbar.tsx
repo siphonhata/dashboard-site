@@ -103,11 +103,11 @@ export default function Navbar() {
               href="#home"
               onClick={(e) => handleScroll(e, 'home')}
               className="flex items-center"
-              aria-label="Smart Web Sync Solutions home"
+              aria-label="Smart Web-Sync Solutions home"
             >
               <Globe className="w-8 h-8 text-blue-600" aria-hidden="true" />
               <span className="ml-2 text-xl font-bold text-gray-900">
-              Smart Web Sync Solutions
+              Smart Web-Sync Solutions
               </span>
             </a>
           </div>

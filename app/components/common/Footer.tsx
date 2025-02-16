@@ -77,7 +77,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-800">
           <p className="text-center text-gray-400 text-sm">
-            © {new Date().getFullYear()} WebCraft Solutions. All rights reserved.
+            © {new Date().getFullYear()} Smart Web Sync Solutions. All rights reserved.
           </p>
         </div>
       </div>
