@@ -12,7 +12,7 @@ export default function Pricing() {
   const plans: Plans[] = [
     {
       title: 'Basic Website',
-      price: '900',
+      price: '1800',
       description: 'Perfect for small businesses and personal websites',
       features: [
         'Responsive design',
@@ -20,28 +20,27 @@ export default function Pricing() {
         'Contact form',
         'Basic SEO optimization',
         'Mobile-friendly design',
-        '2 month of support'
+        '5 month of support'
       ]
     },
     {
-      title: 'Advanced Website',
-      price: '1700',
+      title: 'Web Application',
+      price: '3200',
       description: 'Ideal for growing businesses and e-commerce',
       features: [
         'Everything in Basic, plus:',
-        'Up to 10 pages',
         'E-commerce functionality',
         'Custom animations',
         'Advanced SEO package',
         'Content Management System',
         'Payment gateway integration',
-        '4 months of support'
+        '8 months of support'
       ],
       highlighted: true
     },
     {
       title: 'Custom Solution',
-      price: '3000',
+      price: '6200',
       description: 'For large businesses with specific needs',
       features: [
         'Everything in Advanced, plus:',
@@ -50,7 +49,7 @@ export default function Pricing() {
         'Third-party API integration',
         'Advanced security features',
         'Database design',
-        '8 months of support'
+        '12 months of support'
       ]
     }
   ];

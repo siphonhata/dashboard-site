@@ -61,14 +61,6 @@ const services: Service[] = [
   }
 ];
 
-const technologies = [
-  { name: "React", icon: "/tech/react.svg" },
-  { name: "Next.js", icon: "/tech/nextjs.svg" },
-  { name: "TypeScript", icon: "/tech/typescript.svg" },
-  { name: "Node.js", icon: "/tech/nodejs.svg" },
-  { name: "Tailwind CSS", icon: "/tech/tailwind.svg" },
-  { name: "MongoDB", icon: "/tech/mongodb.svg" },
-];
 
 export default function Services() {
   return (
@@ -127,16 +119,6 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-
-              {/* <a
-                href={`#contact`}
-                className="relative inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-2 transition-all duration-300"
-              >
-                Get Started
-                <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a> */}
             </div>
           ))}
         </div>
@@ -149,22 +131,6 @@ export default function Services() {
           >
             Technologies We Work With
           </h3>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-center">
-            {technologies.map((tech, index) => (
-              <div
-                key={index}
-                data-aos="flip-left"
-                data-aos-delay={index * 100}
-                data-aos-duration="1000"
-                className="flex flex-col items-center group"
-              >
-                <div className="w-20 h-20 flex items-center justify-center bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-110">
-                  <img src={tech.icon} alt={tech.name} className="w-12 h-12" />
-                </div>
-                <span className="mt-3 text-sm font-medium text-gray-600">{tech.name}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Call to Action */}
