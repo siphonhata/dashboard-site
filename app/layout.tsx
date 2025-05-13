@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import dynamic from 'next/dynamic';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -82,6 +84,7 @@ return (
   <html lang="en" className="scroll-smooth">
     <body className={`${inter.className} min-h-screen flex flex-col`}>
       <ClientComponents>{children}</ClientComponents>
+      <SpeedInsights />
     </body>
   </html>
 );

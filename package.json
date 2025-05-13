@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.1.1",
     "@react-spring/web": "^9.7.5",
     "@types/nodemailer": "^6.4.17",
+    "@vercel/speed-insights": "^1.2.0",
     "aos": "^2.3.4",
     "clsx": "^2.1.0",
     "framer-motion": "^12.4.1",
