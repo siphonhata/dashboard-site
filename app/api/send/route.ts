@@ -80,7 +80,7 @@ export async function POST(request: Request) {
 
   try {
     await transporter.sendMail({
-      from: `"Your App Name" <${process.env.GMAIL_EMAIL}>`,
+      from: `"Smart Web Sync" <${process.env.GMAIL_EMAIL}>`,
       to: process.env.YOUR_EMAIL,
       subject: `New contact from ${name}`,
       html: emailHtml,
