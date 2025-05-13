@@ -1,131 +1,147 @@
 import React from 'react';
-import { Check } from 'lucide-react';
-import { Plans } from '@/app/lib/types';
+import { Check, Zap, Sparkles, Code } from 'lucide-react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 
-
-export const metadata: Metadata = {
-  title: 'Pricing',
+type Plan = {
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  highlighted?: boolean;
+  icon?: React.ReactNode;
+  cta?: string;
 };
+
 export default function Pricing() {
-  const plans: Plans[] = [
+  const plans: Plan[] = [
     {
-      title: 'Basic Website',
-      price: '1800',
-      description: 'Perfect for small businesses and personal websites',
+      title: 'Starter Website',
+      price: '3,499',
+      description: 'Perfect for small businesses and personal brands',
       features: [
-        'Responsive design',
-        '3 pages website',
-        'Contact form',
-        'Basic SEO optimization',
-        'Mobile-friendly design',
-        '5 month of support'
-      ]
+        '5-page responsive website',
+        'Mobile-optimized design',
+        'Basic SEO setup',
+        'Contact form integration',
+        '3 months technical support',
+        '1 round of revisions'
+      ],
+      icon: <Code className="h-6 w-6 text-blue-600" />,
+      cta: 'Launch My Starter Site'
     },
     {
-      title: 'Web Application',
-      price: '3200',
+      title: 'Business Solution',
+      price: '6,999',
       description: 'Ideal for growing businesses and e-commerce',
       features: [
-        'Everything in Basic, plus:',
+        'Everything in Starter, plus:',
+        'Up to 15 pages',
         'E-commerce functionality',
-        'Custom animations',
-        'Advanced SEO package',
-        'Content Management System',
-        'Payment gateway integration',
-        '8 months of support'
+        'Advanced SEO optimization',
+        'CMS integration',
+        'Payment gateway setup',
+        '6 months support',
+        '3 rounds of revisions'
       ],
-      highlighted: true
+      highlighted: true,
+      icon: <Zap className="h-6 w-6 text-yellow-500" />,
+      cta: 'Boost My Business'
     },
     {
-      title: 'Custom Solution',
-      price: '6200',
-      description: 'For large businesses with specific needs',
+      title: 'Enterprise Package',
+      price: '10,999+',
+      description: 'Custom solutions for large businesses',
       features: [
-        'Everything in Advanced, plus:',
+        'Everything in Business, plus:',
         'Unlimited pages',
-        'Custom backend development',
-        'Third-party API integration',
-        'Advanced security features',
-        'Database design',
-        '12 months of support'
-      ]
+        'Custom web application',
+        'API integrations',
+        'Premium security features',
+        'Database development',
+        '12 months priority support',
+        'Dedicated account manager'
+      ],
+      icon: <Sparkles className="h-6 w-6 text-purple-600" />,
+      cta: 'Build Custom Solution'
     }
   ];
 
-  const PricingTier = ({ title, price, description, features, highlighted = false }: Plans) => (
-    <div className="group relative h-96 w-full">
-      {/* Card Container */}
-      <div className="absolute inset-0 transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        {/* Front Side */}
-        <div className={`absolute inset-0 flex items-center justify-center rounded-lg bg-white ${
-          highlighted ? 'ring-2 ring-blue-600' : ''
-        } [backface-visibility:hidden]`}>
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
-            {highlighted && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="rounded-full bg-blue-600 px-4 py-1 text-sm font-medium text-white">
-                  Most Popular
-                </span>
-              </div>
-            )}
-          </div>
+  const PricingCard = ({ title, price, description, features, highlighted, icon, cta }: Plan) => (
+    <div className={`relative flex flex-col rounded-xl border bg-white shadow-lg transition-all hover:shadow-xl ${
+      highlighted ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-200'
+    }`}>
+      {highlighted && (
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+          <span className="rounded-full bg-blue-600 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+            Most Popular
+          </span>
         </div>
-
-        {/* Back Side */}
-        <div className="absolute inset-0 h-full w-full overflow-y-auto rounded-lg bg-white p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-            <div className="flex items-baseline">
-              <span className="text-4xl font-bold text-gray-900">R{price}</span>
-              <span className="ml-2 text-sm text-gray-600">/project</span>
-            </div>
-            <p className="text-gray-600">{description}</p>
-            <ul className="space-y-3 pt-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <div className="flex-shrink-0">
-                    <Check className="h-5 w-5 text-blue-600" />
-                  </div>
-                  <span className="text-gray-600">{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <button
-  className={`w-full rounded-md px-8 py-3 text-base font-medium transition-colors duration-300 ${
-    highlighted
-      ? 'bg-blue-600 text-white hover:bg-blue-700'
-      : 'border border-gray-300 bg-gray-50 text-gray-900 hover:bg-gray-100'
-  }`}
->
-  <Link href="#contact" className="block w-full h-full">
-    Start Project
-  </Link>
-</button>
-          </div>
+      )}
+      
+      <div className="p-6">
+        <div className="mb-4 flex items-center gap-2">
+          {icon}
+          <h3 className="text-xl font-bold text-gray-900">{title}</h3>
         </div>
+        
+        <div className="mb-6">
+          <p className="text-4xl font-bold text-gray-900">
+            R{price}
+            <span className="text-base font-normal text-gray-600">/once-off</span>
+          </p>
+          <p className="mt-2 text-gray-600">{description}</p>
+        </div>
+        
+        <ul className="mb-8 space-y-3">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-start">
+              <Check className="mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
+              <span className="ml-2 text-gray-700">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div className="mt-auto border-t border-gray-200 p-6">
+        <Link
+          href="#contact"
+          className={`block w-full rounded-lg px-6 py-3 text-center font-medium transition-colors ${
+            highlighted 
+              ? 'bg-blue-600 text-white hover:bg-blue-700' 
+              : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+          }`}
+        >
+          {cta}
+        </Link>
       </div>
     </div>
   );
 
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Web Development Packages
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Transparent Pricing, No Surprises
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
-            Professional web development solutions tailored to your needs
+          <p className="mt-4 text-lg text-gray-600">
+            Professional web solutions with clear deliverables and fixed pricing
           </p>
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, index) => (
-            <PricingTier key={index} {...plan} />
+            <PricingCard key={index} {...plan} />
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-gray-600">
+            Need something custom?{' '}
+            <Link href="#contact" className="font-medium text-blue-600 hover:text-blue-500">
+              Get a personalized quote
+            </Link>
+          </p>
         </div>
       </div>
     </section>
