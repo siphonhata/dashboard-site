@@ -118,7 +118,9 @@ export default function Contact() {
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className={`block w-full px-4 py-3 rounded-lg border ${errors.name ? 'border-red-300' : 'border-gray-200'} shadow-sm focus:border-blue-500 focus:ring-blue-500`}
+                  className={`block w-full px-4 py-3 rounded-lg border ${
+                    errors.name ? 'border-red-300' : 'border-gray-200'
+                  } shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white text-black`}
                 />
                 {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </div>
@@ -132,7 +134,9 @@ export default function Contact() {
                   id="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={`block w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-300' : 'border-gray-200'} shadow-sm focus:border-blue-500 focus:ring-blue-500`}
+                  className={`block w-full px-4 py-3 rounded-lg border ${
+                    errors.email ? 'border-red-300' : 'border-gray-200'
+                  } shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white text-black`}
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
               </div>
@@ -146,7 +150,9 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={`block w-full px-4 py-3 rounded-lg border ${errors.message ? 'border-red-300' : 'border-gray-200'} shadow-sm focus:border-blue-500 focus:ring-blue-500`}
+                  className={`block w-full px-4 py-3 rounded-lg border ${
+                    errors.message ? 'border-red-300' : 'border-gray-200'
+                  } shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white text-black`}
                 />
                 {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
               </div>
